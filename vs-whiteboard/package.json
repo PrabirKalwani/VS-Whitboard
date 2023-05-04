@@ -1,0 +1,40 @@
+{
+  "name": "vs-whiteboard",
+  "displayName": "vs-whiteboard",
+  "description": "Whiteboard for VSCode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.56.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vs-whiteboard.openWhiteboard"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vs-whiteboard.openWhiteboard",
+        "title": "Open Whiteboard"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.56.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.18",
+    "eslint": "^7.28.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.4.0",
+    "typescript": "^4.2.4",
+    "@vscode/test-electron": "^1.4.1"
+  }
+}
